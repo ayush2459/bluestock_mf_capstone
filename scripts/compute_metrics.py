@@ -22,16 +22,16 @@ def load_nav() -> pd.DataFrame:
     """Load processed NAV or fall back to raw"""
     p = PROC / "nav_master.csv"
     if p.exists():
-        df = pd.read_csv(p, parse_dates=["date"])
+        df = pd.read_csv(p, )
     else:
-        df = pd.read_csv(RAW / "02_nav_history.csv", parse_dates=["date"])
+        df = pd.read_csv(RAW / "02_nav_history.csv", )
         df = df.rename(columns={"nav": "nav_inr"})
     df = df.sort_values(["amfi_code", "date"]).reset_index(drop=True)
     return df
 
 
 def load_benchmark() -> pd.DataFrame:
-    df = pd.read_csv(RAW / "10_benchmark_indices.csv", parse_dates=["date"])
+    df = pd.read_csv(RAW / "10_benchmark_indices.csv", )
     nifty = df[df["index_name"] == "Nifty100"].copy()
     nifty = nifty.sort_values("date").set_index("date")["close_value"]
     nifty_ret = nifty.pct_change().dropna()
