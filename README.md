@@ -78,6 +78,13 @@ This project demonstrates practical applications of:
 - Downloadable analytics reports
 
 ---
+### 🌐 Project Links
+
+| Resource | Link |
+|-----------|------|
+| 🚀 Live Demo | https://your-streamlit-app-url.streamlit.app |
+| 💻 GitHub Repository | https://github.com/ayush2459/bluestock_mf_capstone |
+| 👨‍💻 LinkedIn | https://linkedin.com/in/ayush2459 |
 
 ## 🏗️ System Architecture
 
