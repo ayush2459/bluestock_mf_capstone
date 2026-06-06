@@ -54,6 +54,27 @@ hr{border-color:var(--border)!important;margin:1.5rem 0!important;}
 .bf-badge-blue{background:rgba(59,130,246,0.15);color:#3b82f6;border:1px solid rgba(59,130,246,0.3);}
 ::-webkit-scrollbar{width:5px;height:5px;}
 ::-webkit-scrollbar-thumb{background:var(--t3);border-radius:10px;}
+
+/* ── Form inputs visibility fix ── */
+div[data-testid="stTextInput"] input,
+div[data-testid="stTextArea"] textarea,
+div[data-testid="stSelectbox"] > div > div,
+div[data-testid="stDateInput"] input {
+    background-color: #1a1d27 !important;
+    color: #f0f2f8 !important;
+    border: 1px solid #c9a84c55 !important;
+    border-radius: 6px !important;
+}
+div[data-testid="stTextInput"] input:focus,
+div[data-testid="stTextArea"] textarea:focus {
+    border-color: #c9a84c !important;
+    box-shadow: 0 0 0 2px rgba(201,168,76,0.2) !important;
+}
+div[data-testid="stSelectbox"] > div > div { background-color: #1a1d27 !important; }
+div[data-testid="stSelectbox"] svg { fill: #c9a84c !important; }
+div[data-testid="stCheckbox"] label { color: #f0f2f8 !important; }
+div[data-testid="stCheckbox"] input[type="checkbox"] { accent-color: #c9a84c !important; }
+
 </style>
 """
 st.markdown(GLOBAL_CSS, unsafe_allow_html=True)
@@ -604,7 +625,6 @@ elif page == "📄  Generate Report":
     st.markdown("<br>", unsafe_allow_html=True)
     c1, c2 = st.columns([1, 1])
     with c1:
-        st.markdown("<div class='bf-card'>", unsafe_allow_html=True)
         st.markdown("**📋 Report Content**")
         rpt_title    = st.text_input("Report Title", "Bluestock MF Portfolio Report")
         rpt_subtitle = st.text_input("Subtitle / Client Name", "Prepared for: Investment Committee")
@@ -620,10 +640,8 @@ elif page == "📄  Generate Report":
                 "risk-adjusted returns. Recommend maintaining core allocation to large-cap "
                 "and flexi-cap strategies with a 3–5 year horizon.",
                 height=100)
-        st.markdown("</div>", unsafe_allow_html=True)
 
     with c2:
-        st.markdown("<div class='bf-card'>", unsafe_allow_html=True)
         st.markdown("**🎨 Report Style**")
         report_date  = st.date_input("Report Date", datetime.today())
         period_label = st.selectbox("Analysis Period", ["1 Month","3 Months","6 Months","1 Year","3 Years","5 Years"], index=3)
@@ -631,7 +649,6 @@ elif page == "📄  Generate Report":
             "This report is generated for educational and informational purposes only. "
             "Past performance is not indicative of future results. Not investment advice.",
             height=80)
-        st.markdown("</div>", unsafe_allow_html=True)
 
         st.markdown("<br>", unsafe_allow_html=True)
         # Preview card
