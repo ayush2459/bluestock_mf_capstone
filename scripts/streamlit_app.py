@@ -483,7 +483,7 @@ with st.sidebar:
 # HELPERS
 # ──────────────────────────────────────────────
 def make_fig(fig, height=380):
-    fig.update_layout(**PLOTLY_LAYOUT, height=height)
+    fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=height)
     return fig
 
 def badge(text, kind="gold"):
@@ -561,7 +561,8 @@ if page == "🏠  Overview":
                 hovertemplate="%{x|%d %b %Y}<br>₹%{y:.2f}<extra></extra>",
             ))
             fig.update_layout(
-                **PLOTLY_LAYOUT, height=100,
+                **{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ('margin','xaxis','yaxis','showlegend')},
+                height=100,
                 margin=dict(l=0,r=0,t=0,b=0),
                 xaxis=dict(visible=False), yaxis=dict(visible=False),
                 showlegend=False,
@@ -599,7 +600,7 @@ if page == "🏠  Overview":
                 ),
                 hovertemplate="%{y}<br>₹%{x:,.0f} Cr<extra></extra>",
             ))
-            fig.update_layout(**PLOTLY_LAYOUT, height=300,
+            fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=300,
                               title="AUM by Fund House (₹ Cr)")
             st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
@@ -612,7 +613,7 @@ if page == "🏠  Overview":
                 fillcolor="rgba(201,168,76,0.07)",
                 hovertemplate="%{x|%b %Y}<br>₹%{y:,.0f} Cr<extra></extra>",
             ))
-            fig2.update_layout(**PLOTLY_LAYOUT, height=300,
+            fig2.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=300,
                                title="Monthly SIP Inflows (₹ Cr)")
             st.plotly_chart(fig2, use_container_width=True, config={"displayModeBar": False})
 
@@ -641,7 +642,7 @@ elif page == "📊  NAV Explorer":
                     hovertemplate=f"<b>{col}</b><br>%{{x|%d %b %Y}}<br>Indexed: %{{y:.1f}}<extra></extra>",
                 ))
             fig.add_hline(y=100, line_dash="dot", line_color="rgba(255,255,255,0.15)")
-            fig.update_layout(**PLOTLY_LAYOUT, height=460,
+            fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=460,
                               title=f"Indexed NAV Performance (Base = 100, {date_range})",
                               hovermode="x unified")
             st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
@@ -692,7 +693,7 @@ elif page == "📊  NAV Explorer":
                                      fillcolor="rgba(239,68,68,0.12)",
                                      line=dict(width=0), showlegend=False, hoverinfo="skip"))
             fig.add_hline(y=0, line_color="rgba(255,255,255,0.2)", line_dash="dot")
-            fig.update_layout(**PLOTLY_LAYOUT, height=400,
+            fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=400,
                               title=f"{roll_fund} — {window}-Day Rolling Returns (%)")
             st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
@@ -710,7 +711,7 @@ elif page == "📊  NAV Explorer":
                 zmid=0, text=np.round(corr.values, 2), texttemplate="%{text}",
                 hovertemplate="%{x} × %{y}<br>ρ = %{z:.3f}<extra></extra>",
             ))
-            fig.update_layout(**PLOTLY_LAYOUT, height=500,
+            fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=500,
                               title="Return Correlation Matrix")
             st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
@@ -745,7 +746,7 @@ elif page == "⚡  Performance":
                         textposition="outside",
                         hovertemplate=f"<b>%{{x}}</b><br>{lbl} CAGR: %{{y:.2f}}%<extra></extra>",
                     ))
-                fig.update_layout(**PLOTLY_LAYOUT, barmode="group", height=440,
+                fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, barmode="group", height=440,
                                   title="CAGR Comparison (%)",
                                   xaxis_tickangle=-25)
                 st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
@@ -762,7 +763,7 @@ elif page == "⚡  Performance":
                                      marker_color="#3b82f6",
                                      hovertemplate="<b>%{x}</b><br>Sortino: %{y:.3f}<extra></extra>"),
                               row=1, col=2)
-                fig.update_layout(**PLOTLY_LAYOUT, height=400,
+                fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=400,
                                   showlegend=False,
                                   xaxis_tickangle=-25, xaxis2_tickangle=-25)
                 st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
@@ -785,7 +786,7 @@ elif page == "⚡  Performance":
                         ),
                         hovertemplate="<b>%{text}</b><br>Max DD: -%{x:.1f}%<br>3Y CAGR: %{y:.1f}%<extra></extra>",
                     ))
-                    fig2.update_layout(**PLOTLY_LAYOUT, height=380,
+                    fig2.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=380,
                                        title="Risk vs Return (bubble = Sharpe ratio)",
                                        xaxis_title="Max Drawdown (%)",
                                        yaxis_title="3Y CAGR (%)")
@@ -805,7 +806,7 @@ elif page == "⚡  Performance":
                     fillcolor="rgba(239,68,68,0.08)",
                     hovertemplate=f"<b>{fund}</b><br>%{{x|%d %b %Y}}<br>DD: %{{y:.2f}}%<extra></extra>",
                 ))
-                fig.update_layout(**PLOTLY_LAYOUT, height=160, showlegend=False,
+                fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=160, showlegend=False,
                                   title=fund, margin=dict(l=12,r=12,t=32,b=8))
                 st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
@@ -876,7 +877,7 @@ elif page == "🧪  Simulations":
                     mode="lines", line=dict(color="rgba(201,168,76,0.04)", width=0.8),
                     showlegend=False, hoverinfo="skip",
                 ))
-            fig.update_layout(**PLOTLY_LAYOUT, height=460,
+            fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=460,
                               title=f"Monte Carlo — {mc_fund} ({n_sims} paths, {horizon}d)",
                               yaxis_title="NAV (₹)", xaxis_title="Days Forward")
             st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
@@ -936,7 +937,7 @@ elif page == "🧪  Simulations":
                 marker=dict(color="#c9a84c", size=14, symbol="star"),
                 name="Max Sharpe",
             ))
-            fig.update_layout(**PLOTLY_LAYOUT, height=460,
+            fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=460,
                               title="Markowitz Efficient Frontier",
                               xaxis_title="Annualised Volatility (%)",
                               yaxis_title="Annualised Return (%)")
@@ -955,7 +956,7 @@ elif page == "🧪  Simulations":
                 textfont=dict(size=11, color="#f0f2f8"),
                 hovertemplate="<b>%{label}</b><br>%{value:.1f}%<extra></extra>",
             ))
-            fig2.update_layout(**PLOTLY_LAYOUT, height=320,
+            fig2.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=320,
                                title="Max-Sharpe Optimal Portfolio Weights",
                                showlegend=False,
                                annotations=[dict(text=f"Sharpe<br>{port_sharpe[best]:.2f}",
@@ -987,7 +988,7 @@ elif page == "🧪  Simulations":
                 fig.add_vline(x=v, line_dash="dot", line_color=col, line_width=1.5,
                               annotation_text=f" {lbl}: {v:.2f}%",
                               annotation_font=dict(color=col, size=11))
-            fig.update_layout(**PLOTLY_LAYOUT, height=360,
+            fig.update_layout(**{k:v for k,v in PLOTLY_LAYOUT.items() if k not in ("margin","xaxis","yaxis","showlegend","hovermode","hoverlabel","legend")}, height=360,
                               title=f"{var_fund} — Daily Return Distribution",
                               xaxis_title="Daily Return (%)", yaxis_title="Frequency")
             st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
