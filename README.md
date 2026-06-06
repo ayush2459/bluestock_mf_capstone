@@ -1,119 +1,383 @@
-# 📈 Bluestock Fintech — Mutual Fund Analytics Platform
+📊 Bluestock MF Analytics Platform
 
-> End-to-End Data Engineering, ETL Pipeline & Interactive Dashboard  
-> Individual Capstone Project | June 2026 | Bluestock Fintech Pvt. Ltd.
+### Mutual Fund Intelligence & Portfolio Analytics Platform
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit)
+![SQLite](https://img.shields.io/badge/Database-SQLite-green?logo=sqlite)
+![Plotly](https://img.shields.io/badge/Visualization-Plotly-purple?logo=plotly)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+**A comprehensive Mutual Fund Analytics Platform built as part of the Bluestock Fintech Capstone Program, helping investors make smarter, data-driven investment decisions through advanced analytics, portfolio insights, risk assessment, and interactive dashboards.**
 
 ---
 
-## 🚀 Quick Start
+## 🌟 Overview
 
-```bash
-# 1. Clone repo
-git clone https://github.com/[your-username]/bluestock_mf_capstone.git
-cd bluestock_mf_capstone
+The **Bluestock MF Analytics Platform** is an end-to-end fintech analytics solution designed to provide meaningful insights into mutual fund performance and portfolio management. The platform combines data engineering, financial analytics, business intelligence, and visualisation techniques to transform raw financial datasets into actionable investment insights.
 
-# 2. Install dependencies
-pip install -r requirements.txt
+This project demonstrates practical applications of:
 
-# 3. Generate datasets + load DB
-python scripts/generate_datasets.py
-python scripts/load_from_local.py
+- Data Analytics
+- Financial Analysis
+- Business Intelligence
+- Data Engineering
+- Dashboard Development
+- FinTech Solutions
 
-# 4. Run Streamlit dashboard
-streamlit run scripts/streamlit_app.py
+---
 
-# 5. Generate reports
-python scripts/generate_report.py
+## 🚀 Key Features
 
-# 6. Email report
-python scripts/email_report.py
+### 📈 Mutual Fund Performance Analysis
+
+- Historical NAV trend visualization
+- Fund performance comparison
+- CAGR calculation
+- Benchmark comparison
+- Multi-period return analysis
+
+### 💼 Portfolio Analytics
+
+- Portfolio diversification analysis
+- Asset allocation insights
+- Sector-wise exposure tracking
+- Portfolio risk assessment
+- Investment distribution visualization
+
+### ⚠️ Risk Assessment Metrics
+
+- Sharpe Ratio
+- Sortino Ratio
+- Alpha
+- Beta
+- Maximum Drawdown
+- Value at Risk (VaR)
+- Conditional Value at Risk (CVaR)
+
+### 🎯 Recommendation Engine
+
+- Risk-profile based recommendations
+- Goal-oriented fund suggestions
+- Investment horizon analysis
+- Personalized fund discovery
+
+### 📊 Interactive Dashboard
+
+- Dynamic charts
+- KPI dashboards
+- Advanced filters
+- Interactive visualizations
+- User-friendly interface
+
+### 📄 Automated Reporting
+
+- PDF report generation
+- Portfolio summaries
+- Fund performance reports
+- Downloadable analytics reports
+
+---
+
+## 🏗️ System Architecture
+
+```text
+Raw Data Sources
+       │
+       ▼
+Data Ingestion Layer
+       │
+       ▼
+Data Cleaning & Transformation
+       │
+       ▼
+SQLite Database
+       │
+       ▼
+Analytics Engine
+       │
+       ├── Performance Metrics
+       ├── Risk Metrics
+       ├── Portfolio Analytics
+       └── Recommendation Engine
+       │
+       ▼
+Streamlit Dashboard
+       │
+       ▼
+Reports & Insights
 ```
 
 ---
 
-## 📁 Folder Structure
+## 📂 Project Structure
 
-```
+```text
 bluestock_mf_capstone/
+│
 ├── data/
-│   ├── raw/           ← 10 original CSV datasets
-│   ├── processed/     ← cleaned CSVs + chart PNGs
-│   └── db/            ← bluestock_mf.db (SQLite, gitignored)
+│   ├── raw/
+│   ├── processed/
+│   └── db/
+│
 ├── notebooks/
 │   ├── 01_data_ingestion.ipynb
 │   ├── 02_data_cleaning.ipynb
 │   ├── 03_eda_analysis.ipynb
 │   ├── 04_performance_analytics.ipynb
 │   └── 05_advanced_analytics.ipynb
+│
 ├── scripts/
-│   ├── etl_pipeline.py        ← D1: Master ETL
-│   ├── live_nav_fetch.py      ← B1: Cron NAV fetcher
-│   ├── load_from_local.py     ← DB loader (offline)
-│   ├── compute_metrics.py     ← D4: Risk metrics engine
-│   ├── recommender.py         ← D6: Fund recommender
-│   ├── streamlit_app.py       ← B2: Web dashboard
-│   ├── email_report.py        ← B5: HTML email
-│   ├── generate_datasets.py   ← Data generator
-│   └── generate_report.py     ← D7: PDF + PPTX
-├── sql/
-│   ├── schema.sql             ← D2: CREATE TABLE statements
-│   └── queries.sql            ← D2: 10 analytical queries
+│   ├── generate_datasets.py
+│   ├── load_from_local.py
+│   ├── compute_metrics.py
+│   ├── recommender.py
+│   ├── generate_report.py
+│   ├── streamlit_app.py
+│   └── etl_pipeline.py
+│
 ├── reports/
-│   ├── Final_Report.pdf       ← D7
-│   ├── Presentation.pptx      ← D7
-│   └── weekly_report.html     ← B5
+│   ├── Final_Report.pdf
+│   ├── Presentation.pptx
+│   └── Weekly_Report.html
+│
+├── sql/
+│   ├── schema.sql
+│   └── queries.sql
+│
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 📊 Deliverables
+## 📊 Dataset Overview
 
-| ID | Deliverable | Status |
-|----|-------------|--------|
-| D1 | ETL Pipeline (`etl_pipeline.py`) | ✅ |
-| D2 | SQLite Database + SQL queries | ✅ |
-| D3 | EDA Notebook (15+ charts) | ✅ |
-| D4 | Performance Metrics (7 CSVs) | ✅ |
-| D5 | Streamlit Dashboard (4 pages) | ✅ |
-| D6 | Advanced Analytics (VaR, Monte Carlo) | ✅ |
-| D7 | Final Report PDF + PPTX | ✅ |
-| B1 | Cron job NAV fetcher | ✅ |
-| B2 | Streamlit web app | ✅ |
-| B3 | Monte Carlo simulation | ✅ |
-| B4 | Markowitz Efficient Frontier | ✅ |
-| B5 | HTML email report generator | ✅ |
+The platform processes multiple datasets covering different aspects of mutual fund analytics.
+
+| Dataset | Description |
+|----------|------------|
+| Fund Master | Fund metadata and classifications |
+| NAV History | Daily Net Asset Value records |
+| AUM Data | Assets Under Management |
+| SIP Inflows | Monthly SIP contributions |
+| Category Inflows | Fund category performance |
+| Investor Transactions | Investor activity data |
+| Portfolio Holdings | Sector allocation details |
+| Benchmark Indices | Market benchmark performance |
+
+### Data Statistics
+
+- 100,000+ Records Processed
+- Multiple Financial Datasets
+- Portfolio Holdings Data
+- Historical Market Data
+- Mutual Fund Performance Records
 
 ---
 
-## ⚙️ Cron Job Setup (B1)
+## 📉 Financial Metrics Implemented
+
+| Metric | Description |
+|----------|-------------|
+| CAGR | Annualized growth rate |
+| Sharpe Ratio | Risk-adjusted return measurement |
+| Sortino Ratio | Downside-risk adjusted returns |
+| Alpha | Excess return over benchmark |
+| Beta | Market sensitivity indicator |
+| Maximum Drawdown | Largest portfolio decline |
+| VaR | Expected loss estimation |
+| CVaR | Tail-risk measurement |
+
+---
+
+## 🛠️ Technology Stack
+
+### Programming
+
+- Python 3.11
+
+### Data Analytics
+
+- Pandas
+- NumPy
+- SciPy
+
+### Data Visualization
+
+- Plotly
+- Matplotlib
+
+### Dashboard Development
+
+- Streamlit
+
+### Database
+
+- SQLite
+
+### Reporting
+
+- ReportLab
+- python-pptx
+
+### Development Tools
+
+- Jupyter Notebook
+- Git
+- GitHub
+
+---
+
+## ⚡ Installation & Setup
+
+### 1. Clone Repository
 
 ```bash
-# Add to crontab (runs at 8 PM every weekday)
-crontab -e
-# Add this line:
-0 20 * * 1-5 /usr/bin/python3 /path/to/scripts/live_nav_fetch.py
+git clone https://github.com/ayush2459/bluestock_mf_capstone.git
+
+cd bluestock_mf_capstone
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Generate Datasets
+
+```bash
+python scripts/generate_datasets.py
+```
+
+### 4. Load Database
+
+```bash
+python scripts/load_from_local.py
+```
+
+### 5. Compute Analytics Metrics
+
+```bash
+python scripts/compute_metrics.py
+```
+
+### 6. Launch Dashboard
+
+```bash
+streamlit run scripts/streamlit_app.py
+```
+
+Open the application:
+
+```text
+http://localhost:8501
 ```
 
 ---
 
-## 🗄️ Database Schema
+## 📸 Dashboard Modules
 
-8 tables in star schema:
-- `dim_fund` — 40 AMFI schemes
-- `dim_date` — 1,612 dates
-- `fact_nav` — 42,550 daily NAV rows
-- `fact_transactions` — 63,451 investor transactions
-- `fact_performance` — risk metrics per scheme
-- `fact_aum` — quarterly AUM by fund house
-- `fact_sip_industry` — monthly SIP data
-- `fact_benchmark` — 6 index time series
+### 🏠 Overview Dashboard
+
+- Key Performance Indicators
+- Industry Insights
+- Market Overview
+- Fund Summary
+
+### 📊 NAV Explorer
+
+- Historical NAV Trends
+- Fund Comparisons
+- Performance Visualization
+
+### 📈 Performance Analytics
+
+- Return Analysis
+- Risk-Adjusted Performance
+- Fund Rankings
+
+### 🧪 Risk & Simulation
+
+- Monte Carlo Simulations
+- VaR Analysis
+- CVaR Analysis
+
+### 💡 Recommendation Engine
+
+- Personalized Fund Suggestions
+- Goal-Based Recommendations
+- Risk-Based Filtering
+
+### 📄 Report Generator
+
+- PDF Reports
+- Performance Summaries
+- Portfolio Analytics Reports
 
 ---
 
-## ⚠️ Disclaimer
+## 📈 Project Outcomes
 
-All data sourced from publicly available AMFI India, mfapi.in, NSE/BSE.  
-This project is for **educational purposes only** and does not constitute financial advice.
+- Developed an end-to-end financial analytics platform
+- Built interactive business intelligence dashboards
+- Implemented advanced financial risk metrics
+- Designed a recommendation engine for investors
+- Automated reporting workflows
+- Demonstrated practical fintech analytics applications
+- Improved investment decision support through data-driven insights
 
-© 2026 Bluestock Fintech Pvt. Ltd.
+---
+
+## 🎯 Future Enhancements
+
+- Live Mutual Fund API Integration
+- Real-Time NAV Tracking
+- Machine Learning Recommendation Models
+- Portfolio Optimization Algorithms
+- User Authentication System
+- Mobile Responsive Dashboard
+- Cloud Deployment
+- Advanced Portfolio Simulation
+
+---
+
+## 👨‍💻 Author
+
+### Ayush Gupta
+
+**Data Analyst | Aspiring Data Scientist | FinTech Enthusiast**
+
+GitHub: https://github.com/ayush2459
+
+LinkedIn: https://linkedin.com/in/ayush2459
+
+---
+
+## 🏆 Skills Demonstrated
+
+- Data Analytics
+- Financial Analytics
+- Business Intelligence
+- Dashboard Development
+- Data Visualization
+- Database Management
+- Python Programming
+- Statistical Analysis
+- FinTech Solutions
+- Report Automation
+
+---
+
+## 📜 License
+
+This project was developed for educational and portfolio purposes as part of the Bluestock Fintech Capstone Program.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a star on GitHub.
+
+**Built with Python, Data Analytics, Financial Intelligence, and FinTech Innovation 🚀**
