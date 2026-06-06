@@ -1,0 +1,41 @@
+amfi_code,fund_house,scheme_name,category,sub_category,plan,launch_date,benchmark,expense_ratio_pct,exit_load_pct,fund_manager,risk_category,sebi_category_code
+119551,SBI Mutual Fund,SBI Bluechip Fund - Direct Growth,Equity,Large Cap,Direct,2013-01-01,Nifty 100 TRI,0.84,1.0,Sohini Andani,Very High,EC01
+120503,ICICI Prudential MF,ICICI Pru Bluechip Fund - Direct Growth,Equity,Large Cap,Direct,2013-01-01,Nifty 100 TRI,0.87,1.0,Anish Tawakley,Very High,EC01
+118632,Nippon India MF,Nippon India Large Cap Fund - Direct,Equity,Large Cap,Direct,2013-01-01,Nifty 100 TRI,0.92,1.0,Sailesh Raj Bhan,Very High,EC01
+119092,Axis MF,Axis Bluechip Fund - Direct Growth,Equity,Large Cap,Direct,2013-01-01,Nifty 100 TRI,0.54,1.0,Shreyash Devalkar,Very High,EC01
+120841,Kotak MF,Kotak Bluechip Fund - Direct Growth,Equity,Large Cap,Direct,2013-01-01,Nifty 100 TRI,0.61,1.0,Harsha Upadhyaya,Very High,EC01
+125497,HDFC MF,HDFC Top 100 Fund - Direct Growth,Equity,Large Cap,Direct,2013-01-01,Nifty 100 TRI,1.05,1.0,Priya Ranjan,Very High,EC01
+118834,SBI Mutual Fund,SBI Small Cap Fund - Direct Growth,Equity,Small Cap,Direct,2013-09-09,BSE 250 SmallCap TRI,0.69,1.0,R. Srinivasan,Very High,EC03
+120716,Mirae Asset MF,Mirae Asset Emerging Bluechip - Direct,Equity,Large & Mid Cap,Direct,2014-07-09,Nifty LargeMidcap 250 TRI,0.65,1.0,Neelesh Surana,Very High,EC04
+120465,PPFAS MF,Parag Parikh Flexi Cap - Direct Growth,Equity,Flexi Cap,Direct,2013-05-24,Nifty 500 TRI,0.59,0.0,Rajeev Thakkar,Very High,EC05
+120586,Axis MF,Axis Long Term Equity (ELSS) - Direct,Equity,ELSS,Direct,2015-12-29,Nifty 500 TRI,0.54,0.0,Jinesh Gopani,Very High,EC08
+125354,ICICI Prudential MF,ICICI Pru Technology Fund - Direct,Equity,Sectoral-Technology,Direct,2013-03-13,BSE TECk TRI,0.97,1.0,Vaibhav Dusad,Very High,EC09
+120847,Kotak MF,Kotak Emerging Equity Fund - Direct,Equity,Mid Cap,Direct,2014-01-01,Nifty Midcap 150 TRI,0.4,1.0,Pankaj Tibrewal,Very High,EC02
+119775,Nippon India MF,Nippon India Small Cap Fund - Direct,Equity,Small Cap,Direct,2013-09-16,BSE 250 SmallCap TRI,0.79,1.0,Samir Rachh,Very High,EC03
+119598,Axis MF,Axis Midcap Fund - Direct Growth,Equity,Mid Cap,Direct,2013-01-01,Nifty Midcap 150 TRI,0.53,1.0,Shreyash Devalkar,Very High,EC02
+118825,HDFC MF,HDFC Mid-Cap Opportunities - Direct,Equity,Mid Cap,Direct,2013-01-01,Nifty Midcap 150 TRI,0.83,1.0,Chirag Setalvad,Very High,EC02
+120503,ICICI Prudential MF,ICICI Pru Midcap Fund - Direct Growth,Equity,Mid Cap,Direct,2014-01-01,Nifty Midcap 150 TRI,0.99,1.0,Atul Patel,Very High,EC02
+122639,SBI Mutual Fund,SBI Magnum Midcap Fund - Direct,Equity,Mid Cap,Direct,2015-01-01,Nifty Midcap 150 TRI,0.89,1.0,Sohini Andani,Very High,EC02
+118989,HDFC MF,HDFC Small Cap Fund - Direct Growth,Equity,Small Cap,Direct,2013-01-01,BSE 250 SmallCap TRI,0.64,1.0,Chirag Setalvad,Very High,EC03
+120594,Kotak MF,Kotak Small Cap Fund - Direct Growth,Equity,Small Cap,Direct,2015-01-01,BSE 250 SmallCap TRI,0.49,1.0,Pankaj Tibrewal,Very High,EC03
+120503,Mirae Asset MF,Mirae Asset Large Cap Fund - Direct,Equity,Large Cap,Direct,2013-01-01,Nifty 100 TRI,0.54,1.0,Gaurav Khandelwal,Very High,EC01
+118550,SBI Mutual Fund,SBI Liquid Fund - Direct Growth,Debt,Liquid,Direct,2013-01-01,CRISIL Liquid Overnight Index,0.2,0.0,Rajeev Radhakrishnan,Low,DC01
+119270,HDFC MF,HDFC Liquid Fund - Direct Growth,Debt,Liquid,Direct,2013-01-01,CRISIL Liquid Overnight Index,0.2,0.0,Anil Bamboli,Low,DC01
+118560,ICICI Prudential MF,ICICI Pru Liquid Fund - Direct Growth,Debt,Liquid,Direct,2013-01-01,CRISIL Liquid Overnight Index,0.2,0.0,Rahul Goswami,Low,DC01
+120586,Nippon India MF,Nippon India Liquid Fund - Direct,Debt,Liquid,Direct,2013-01-01,CRISIL Liquid Overnight Index,0.2,0.0,Anju Chhajer,Low,DC01
+118721,Kotak MF,Kotak Liquid Fund - Direct Growth,Debt,Liquid,Direct,2013-01-01,CRISIL Liquid Overnight Index,0.21,0.0,Deepak Agrawal,Low,DC01
+120310,SBI Mutual Fund,SBI Short Term Debt Fund - Direct,Debt,Short Duration,Direct,2014-01-01,CRISIL Short Term Bond Index,0.45,0.0,Rajeev Radhakrishnan,Moderately Low,DC03
+119830,HDFC MF,HDFC Short Term Debt Fund - Direct,Debt,Short Duration,Direct,2014-01-01,CRISIL Short Term Bond Index,0.32,0.0,Anil Bamboli,Moderately Low,DC03
+118901,ICICI Prudential MF,ICICI Pru Short Term Fund - Direct,Debt,Short Duration,Direct,2014-01-01,CRISIL Short Term Bond Index,0.4,0.0,Rahul Goswami,Moderately Low,DC03
+120125,SBI Mutual Fund,SBI Equity Hybrid Fund - Direct,Hybrid,Aggressive Hybrid,Direct,2013-01-01,CRISIL Hybrid 35+65 Aggr Index,0.81,1.0,R. Srinivasan,Very High,HC01
+119440,HDFC MF,HDFC Balanced Advantage Fund - Direct,Hybrid,Dynamic Asset Alloc,Direct,2013-01-01,CRISIL Hybrid 50+50 Moderate,0.79,1.0,Priya Ranjan,Very High,HC02
+118770,ICICI Prudential MF,ICICI Pru Balanced Advantage - Direct,Hybrid,Dynamic Asset Alloc,Direct,2013-01-01,CRISIL Hybrid 50+50 Moderate,0.92,1.0,Sankaran Naren,Very High,HC02
+120045,Kotak MF,Kotak Equity Hybrid Fund - Direct,Hybrid,Aggressive Hybrid,Direct,2015-01-01,CRISIL Hybrid 35+65 Aggr Index,0.44,1.0,Harsha Upadhyaya,Very High,HC01
+119660,Mirae Asset MF,Mirae Asset Hybrid Equity Fund - Direct,Hybrid,Aggressive Hybrid,Direct,2015-07-29,CRISIL Hybrid 35+65 Aggr Index,0.29,1.0,Neelesh Surana,Very High,HC01
+118430,Axis MF,Axis Equity Hybrid Fund - Direct,Hybrid,Aggressive Hybrid,Direct,2016-01-01,CRISIL Hybrid 35+65 Aggr Index,0.55,1.0,Shreyash Devalkar,Very High,HC01
+120200,SBI Mutual Fund,SBI Nifty Index Fund - Direct,Equity,Index Fund,Direct,2013-01-01,Nifty 50 TRI,0.12,0.0,Raviprakash Sharma,Very High,EC10
+119350,HDFC MF,HDFC Index Fund Nifty 50 - Direct,Equity,Index Fund,Direct,2013-01-01,Nifty 50 TRI,0.1,0.0,Krishan Kumar Daga,Very High,EC10
+118650,ICICI Prudential MF,ICICI Pru Nifty 50 Index Fund - Direct,Equity,Index Fund,Direct,2013-01-01,Nifty 50 TRI,0.17,0.0,Kayzad Eghlim,Very High,EC10
+120900,Nippon India MF,Nippon India Index Fund Nifty 50,Equity,Index Fund,Direct,2013-01-01,Nifty 50 TRI,0.1,0.0,Mehul Dama,Very High,EC10
+119100,Axis MF,Axis Nifty 100 Index Fund - Direct,Equity,Index Fund,Direct,2019-01-01,Nifty 100 TRI,0.2,0.0,Jinesh Gopani,Very High,EC11
+120760,Kotak MF,Kotak Nifty 50 Index Fund - Direct,Equity,Index Fund,Direct,2019-01-01,Nifty 50 TRI,0.1,0.0,Devender Singhal,Very High,EC10
